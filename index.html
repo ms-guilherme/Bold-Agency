@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>AgênciaBold</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     
@@ -13,11 +14,23 @@
             <div id="menu">
     
                     <div class="img-conteiner"></div>
+
                     <div id="menu-conteiner-links">
-                        <a href="#" class="menu-links">Início</a>
-                        <a href="#" class="menu-links">Por que nós?</a>
-                        <a href="#" class="menu-links">Depoimentos</a>
-                        <a href="#" class="menu-links" id="menu-contact">Entre em contato</a>
+                        <a href="#hero-section" class="menu-links">Início</a>
+                        <a href="#section-porquenos" class="menu-links">Por que nós?</a>
+                        <a href="#depoimentos" class="menu-links">Depoimentos</a>
+                        <a href="#contato" class="menu-links" id="menu-contact">Entre em contato</a>
+                    </div> <!--menu-items-->
+                    <div id="menu-mobile-bars">
+                        <input id = "menu-button" type="checkbox" style="display: none;" onclick="Menu()">
+                        <label for= "menu-button"><i class="fas fa-bars"></i></label>
+                    </div>
+
+                    <div id="menu-mobile-links">
+                        <a href="#hero-section" class="menu-links">Início</a>
+                        <a href="#section-porquenos" class="menu-links">Por que nós?</a>
+                        <a href="#depoimentos" class="menu-links">Depoimentos</a>
+                        <a href="#contato" class="menu-links">Entre em contato</a>
                     </div> <!--menu-items-->
     
             </div> <!--menu-->
@@ -73,7 +86,7 @@
 
         <h2>Vamos começar seu projeto?</h2>
         <p>Fale com um consultor e tire sua ideia do papel</p>
-        <a>ENTRAR EM CONTATO</a>
+        <a href="#contato">ENTRAR EM CONTATO</a>
 
     </section> <!-- Entre em Contato-->
 
@@ -93,7 +106,7 @@
                 <img src="images/check.png" alt="Check!">
                 <p>Acreditamos que trabalhos criativos são os que mais se destacam em meio a multidão. Saia do feijão com arroz.</p>
             </div>
-            <div id="div-a"><a>ENTRAR EM CONTATO</a></div>
+            <div id="div-a"><a href="#contato">ENTRAR EM CONTATO</a></div>
         </div>
         <div id="div-imagem1" class="beneficios-div">
             <img id="imagem1" src="images/IMAGEM1.png" alt="Benefícios">
@@ -116,7 +129,7 @@
                 <img src="images/check.png" alt="Check!">
                 <p>Acreditamos que trabalhos criativos são os que mais se destacam em meio a multidão. Saia do feijão com arroz.</p>
             </div>
-            <div id="div-a"><a>ENTRAR EM CONTATO</a></div>
+            <div id="div-a"><a href="#contato">ENTRAR EM CONTATO</a></div>
         </div>
     </section> <!--  Benefícios Mobile -->
 
@@ -129,21 +142,21 @@
                 <img src="images/DEPOIMENTO1.png" alt="Depoimento">
                 <h3>Miriam Souza</h3>
                 <p>Uber</p>
-                <p>"O trabalho da Agência Bold foi fundamental para o nosso posicionamento e nossas estratégias de 2023. Juntos, tivemos excelentes resultados e nossos clientes ficaram surpresos com a qualidade. Foi um trabalho incrível!"</p>
+                <p>"O trabalho da Agência Bold foi fundamental para as nossas estratégias de 2023. <br> Juntos, tivemos excelentes resultados e nossos clientes ficaram surpresos com a qualidade."</p>
                 <img class="rate" src="images/RATE.png" alt="5 Estrelas">
             </div>
             <div class="depoimento-div">
                 <img src="images/DEPOIMENTO2.png" alt="Depoimento">
                 <h3>Lucas Mendes</h3>
                 <p>The North Face</p>
-                <p>"Buscamos a Agência Bold para nos ajudar com campanhas de growth marketing focadas em um público extremamente específico. O produto teve faturamento maior que 300%."</p>
+                <p>"Buscamos a Agência Bold para nos ajudar com campanhas de growth marketing focadas em um público extremamente específico. <br> Com ela, houve um faturamento maior que 300%."</p>
                 <img class="rate" src="images/RATE.png" alt="5 Estrelas">
             </div>
             <div class="depoimento-div">
                 <img src="images/DEPOIMENTO3.png" alt="Depoimento">
                 <h3>Zaya Menphis</h3>
                 <p>Rappi</p>
-                <p>"A estratégia de lançamento da marca não seria a mesma sem o trabalho comprometido da Agência Bold. Obrigado ao Guilherme, que abraçou nossos desafios como um de nós."</p>
+                <p>"A estratégia de lançamento da marca não seria a mesma sem o trabalho comprometido da Agência Bold. Meus agradecimentos ao Guilherme, que abraçou nossos desafios como um de nós."</p>
                 <img class="rate" src="images/RATE.png" alt="5 Estrelas">
             </div>
         </div>
@@ -153,12 +166,13 @@
     <section id="contato"> <!-- Contato -->
 
         <h2>Entre em Contato</h2>
+        <p id="contato-p"></p>
 
-        <input type="text" placeholder="Nome">
-        <input type="text" placeholder="Email">
-        <textarea placeholder="Insira sua mensagem..."></textarea>
+        <input class="form" type="text" placeholder="Nome">
+        <input class="form" type="email" placeholder="Email">
+        <textarea class="form" placeholder="Insira sua mensagem..."></textarea>
 
-        <input type="submit">
+        <input type="submit" onclick="Formulario()">
 
     </section> <!-- Contato -->
 
@@ -167,9 +181,9 @@
         <p>Desenvolvido por <b>Guilherme Menezes</b></p>
         
         <div id="menu-conteiner-links-footer">
-            <a href="#" name="menu-links-footer" class="menu-links">Início</a>
-            <a href="#" name="menu-links-footer" class="menu-links">Por que nós?</a>
-            <a href="#" name="menu-links-footer" class="menu-links">Depoimentos</a>
+            <a href="#hero-section" name="menu-links-footer" class="menu-links">Início</a>
+            <a href="#section-porquenos" name="menu-links-footer" class="menu-links">Por que nós?</a>
+            <a href="#depoimentos" name="menu-links-footer" class="menu-links">Depoimentos</a>
         </div> <!--menu-items-->
 
         <div id="footer-imgs-conteiner">
@@ -177,7 +191,41 @@
             <a href="https://www.instagram.com/ms.guilherm/" target="_blank"><img src="images/instagram-logo.png" alt="Instagram de Guilherme Menezes"></a>
         </div>
 
-    </footer>
+    </footer> 
 
+    <script>
+
+        window.addEventListener("resize", ()=> {
+            if (window.innerWidth > 590) {
+                document.getElementById('menu-mobile-links').style.left = '-600px';
+                document.getElementById('menu-button').checked = false;
+            }
+        })
+        
+
+        function Menu() {
+
+            let button = document.getElementById('menu-button');
+
+            if (button.checked) {
+                let menu = document.getElementById("menu-mobile-links").style.left = '-10px';
+            }
+            else {
+                let menu = document.getElementById("menu-mobile-links").style.left = '-600px';
+            }
+
+        }
+
+        function Formulario() {
+            let campos = document.querySelectorAll('.form');
+            campos.forEach((textos) => {
+                textos.value = "";
+            })
+
+            let p = document.getElementById('contato-p');
+            p.innerHTML = "Mensagem enviada! <br> Em breve, entraremos em contato com você!";
+        }
+
+    </script>
 </body>
 </html>
